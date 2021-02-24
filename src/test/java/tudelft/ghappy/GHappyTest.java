@@ -27,8 +27,8 @@ public class GHappyTest {
         Boolean result = str.gHappy(in);
         Assertions.assertEquals(exp,result);
     }
-    @ParameterizedTest
-    @CsvSource({"xggx","xgxx","gxgg","gggg","xxxx"})
+    @ParameterizedTest(name = "in={0}, exp={1}")
+    @CsvSource({"xggx,true","xgxx,false","gxgg,false","gggg,true","xxxx,true"})
     public void fourChar(String in,Boolean exp){
         GHappy str = new GHappy();
         Boolean result = str.gHappy(in);
