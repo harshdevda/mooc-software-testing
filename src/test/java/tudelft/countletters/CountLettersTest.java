@@ -16,5 +16,21 @@ public class CountLettersTest {
         int words = new CountLetters().count("cats|dog");
         Assertions.assertEquals(1, words);
     }
+    @Test
+    public void endWithR(){
+        int words = new CountLetters().count("fear|dog");
+        Assertions.assertEquals(1,words);
+    }
+    @Test
+    public void endWithRandS(){
+        int words = new CountLetters().count("fear|dogs");
+        Assertions.assertEquals(2,words);
+    }
+    @Test
+    public void endWithXandR(){
+        int words = new CountLetters().count("fox|fear");
+        Assertions.assertEquals(1,words);
+
+    }
 
 }
